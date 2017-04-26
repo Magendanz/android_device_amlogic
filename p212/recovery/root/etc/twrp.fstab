@@ -1,0 +1,18 @@
+# mount point   fstype      device                  [device2]
+
+#/bootloader     emmc        /dev/block/bootloader  /dev/block/mmcblk1p1   flags=backup=1;display=Bootloader
+#/env            emmc        /dev/block/env         /dev/block/mmcblk1p4
+/logo           emmc        /dev/block/logo        /dev/block/mmcblk1p5   flags=backup=1;display=Logo;flashimg
+/misc           emmc        /dev/block/misc        /dev/block/mmcblk1p10
+/recovery       emmc        /dev/block/recovery    /dev/block/mmcblk1p6   flags=backup=1;display=Recovery
+/boot           emmc        /dev/block/boot        /dev/block/mmcblk1p12  flags=backup=1;display=Boot
+#/instaboot      emmc        /dev/block/instaboot   /dev/block/mmcblk1p11  flags=backup=1;display=Instaboot
+#/reserved       emmc        /dev/block/reserved    /dev/block/mmcblk1p2   flags=backup=1;display=Reserved
+#/rsv            emmc        /dev/block/rsv         /dev/block/mmcblk1p7   flags=backup=1;display=RSV
+#/tee            emmc        /dev/block/tee         /dev/block/mmcblk1p8   flags=backup=1;display=Tee
+#/crypt          emmc        /dev/block/crypt       /dev/block/mmcblk1p9   flags=backup=1;display=Crypt
+/cache          ext4        /dev/block/cache                              flags=backup=1;display=Cache
+/system         ext4        /dev/block/system                             flags=backup=1;display=System
+/data           ext4        /dev/block/data                               flags=backup=1
+/external_sd    auto        /dev/block/mmcblk1p1                          flags=wipeingui;storage;removable;display="External SD"
+/usb-otg        auto        /dev/block/sda1                               flags=display="USB OTG";removable;storage

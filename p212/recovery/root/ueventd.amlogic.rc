@@ -1,0 +1,78 @@
+# Amlogic AV streaming devices
+/dev/amvideo              0660   media     system
+/dev/ppmgr                0660   media     system
+/dev/amstream_sub         0660   media     system
+/dev/amstream_sub_read    0660   media     system
+/dev/amstream_rm          0660   media     system
+/dev/amstream_mpps        0660   media     system
+/dev/amstream_mpts        0660   media     system
+/dev/amstream_abuf        0660   media     system
+/dev/amstream_vbuf        0660   media     system
+/dev/amstream_hevc        0660   media     system
+/dev/audiodsp0            0660   media     system
+/dev/uio0                 0660   media     system
+/dev/video0               0660   system     camera
+/dev/video1               0660   system     camera
+/dev/video10              0660   media     system
+/dev/video11              0660   media     system
+/dev/video13              0660   media     system
+/dev/amaudio_utils        0660   media     system
+/dev/amaudio_ctl          0660   media     system
+/dev/amvenc_avc           0660   media     system
+/dev/amsubtitle           0660   media     system
+/dev/jpegenc		  0660   media     system
+
+#audio data
+/dev/audio_data_debug     0660   media     system
+/dev/amjpegdec            0666   system     system
+/dev/ge2d                 0660   system     system
+/dev/vdin0                0660   system     system
+/dev/virtmem              0666   system     system
+
+# Mali
+/dev/ump                  0666   system     graphics
+/dev/mali                 0666   system     graphics
+/dev/mali0                0666   system     graphics
+/dev/ion                  0666   system     graphics
+
+#possible serial
+/dev/ttyS1                0660   bluetooth     net_bt_stack
+/dev/ttyS2                0660   bluetooth     net_bt_stack
+/dev/ttyS3                0666   system     system
+/dev/ttya0                0660   system     system
+/dev/ttya1                0660   system     system
+/dev/ptya0                0660   system     system
+/dev/ptya1                0660   system     system
+/dev/ttyHS2               0666   bluetooth  bluetooth
+/dev/ttyS20               0664   system     system
+
+#For invensense`s sensors
+/dev/mpu                  0666   system     system
+/dev/mpuirq               0666   system     system
+/dev/accelirq             0666   system     system
+/dev/timerirq             0666   system     system
+
+#bluetooth
+/sys/devices/platform/bt-dev/rfkill/rfkill0   state   0660    bluetooth   bluetooth
+/sys/devices/platform/bt-dev/rfkill/rfkill0   type    0660    bluetooth   bluetooth
+/sys/devices/bt-dev.*/rfkill/rfkill0   state   0660    bluetooth   bluetooth
+/sys/devices/bt-dev.*/rfkill/rfkill0   type    0660    bluetooth   bluetooth
+
+#hdmi cec
+/sys/class/amhdmitx/amhdmitx0   phy_addr     0664    system    system
+/sys/class/amhdmitx/amhdmitx0   hpd_state    0664    system    system
+/sys/class/amhdmitx/amhdmitx0   cec          0664    system    system
+
+#
+/dev/graphics/*           0660   root       graphics
+
+# For USB Joysticks
+/dev/input/js*            0664   system     system
+
+/dev/wifi_power           0660   wifi       wifi
+
+/dev/otz_client           0666   drm        drm
+
+#consumerir
+/dev/irblaster1           0660   system     system
+
