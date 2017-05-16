@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The Android Open-Source Project
+# Copyright (C) 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_p200_2G.mk
+add_lunch_combo omni_p200-userdebug
+add_lunch_combo omni_p200-user
+add_lunch_combo omni_p200-eng

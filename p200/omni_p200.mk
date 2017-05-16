@@ -21,10 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_NAME := omni_p200_2G
-PRODUCT_DEVICE := p200_2G
+PRODUCT_NAME := omni_p200
+PRODUCT_DEVICE := p200
 PRODUCT_BRAND := amlogic
-PRODUCT_MODEL := p200_2G
+PRODUCT_MODEL := p200
 PRODUCT_MANUFACTURER := Amlogic
 
 # Set build fingerprint / ID / Product Name ect.
