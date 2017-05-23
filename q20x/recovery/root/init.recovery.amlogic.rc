@@ -1,0 +1,12 @@
+on early-init
+    insmod /boot/dwc3.ko
+    insmod /boot/aml_nftl_dev.ko sync=0
+
+on init
+
+on boot
+service systemcontrol /sbin/systemcontrol_static /etc/mesondisplay.cfg
+    oneshot
+
+service console /sbin/sh
+    console
