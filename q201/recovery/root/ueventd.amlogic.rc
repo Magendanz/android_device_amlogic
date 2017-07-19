@@ -57,11 +57,16 @@
 /sys/devices/platform/bt-dev/rfkill/rfkill0   type    0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0   state   0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0   type    0660    bluetooth   bluetooth
+/dev/rtk_btusb            0660   bluetooth  net_bt_stack
 
 #hdmi cec
 /sys/class/amhdmitx/amhdmitx0   phy_addr     0664    system    system
 /sys/class/amhdmitx/amhdmitx0   hpd_state    0664    system    system
 /sys/class/amhdmitx/amhdmitx0   cec          0664    system    system
+
+/dev/btusb0                0660   bluetooth     net_bt_stack
+
+/sys/class/video/device_resolution    0666   system     system
 
 #
 /dev/graphics/*           0660   root       graphics
