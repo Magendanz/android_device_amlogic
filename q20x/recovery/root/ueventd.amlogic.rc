@@ -10,20 +10,20 @@
 /dev/amstream_vbuf        0660   media     system
 /dev/amstream_hevc        0660   media     system
 /dev/audiodsp0            0660   media     system
-/dev/uio0                 0660   media     system
+/dev/uio0                 0660   system     mediadrm
 /dev/video0               0660   system     camera
 /dev/video1               0660   system     camera
-/dev/video10              0660   media     system
+/dev/video10              0660   system	   mediadrm
 /dev/video11              0660   media     system
-/dev/video13              0660   media     system
+/dev/video13              0660   system     mediadrm
 /dev/amaudio_utils        0660   media     system
 /dev/amaudio_ctl          0660   media     system
-/dev/amvenc_avc           0660   media     system
+/dev/amvenc_avc           0660   mediacodec     system
 /dev/amsubtitle           0660   media     system
 /dev/jpegenc		  0660   media     system
 
 #audio data
-/dev/audio_data_debug     0660   media     system
+/dev/audio_data_debug     0660   mediacodec system
 /dev/amjpegdec            0666   system     system
 /dev/ge2d                 0660   system     system
 /dev/vdin0                0660   system     system
@@ -34,6 +34,9 @@
 /dev/mali                 0666   system     graphics
 /dev/mali0                0666   system     graphics
 /dev/ion                  0666   system     graphics
+
+# sw_sync
+/dev/sw_sync                 0666   system     graphics
 
 #possible serial
 /dev/ttyS1                0660   bluetooth     net_bt_stack
@@ -57,11 +60,16 @@
 /sys/devices/platform/bt-dev/rfkill/rfkill0   type    0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0   state   0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0   type    0660    bluetooth   bluetooth
+/dev/rtk_btusb            0660   bluetooth  net_bt_stack
 
 #hdmi cec
 /sys/class/amhdmitx/amhdmitx0   phy_addr     0664    system    system
 /sys/class/amhdmitx/amhdmitx0   hpd_state    0664    system    system
 /sys/class/amhdmitx/amhdmitx0   cec          0664    system    system
+
+/dev/btusb0                0660   bluetooth     net_bt_stack
+
+/sys/class/video/device_resolution    0666   system     system
 
 #
 /dev/graphics/*           0660   root       graphics
@@ -75,4 +83,5 @@
 
 #consumerir
 /dev/irblaster1           0660   system     system
-
+# DVB API device nodes
+/dev/dvb0.frontend0                 0666   root       system

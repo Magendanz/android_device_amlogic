@@ -1,10 +1,12 @@
 on early-init
+    insmod /boot/dwc_otg.ko
     insmod /boot/dwc3.ko
     insmod /boot/aml_nftl_dev.ko sync=0
 
-on init
-
 on boot
+service remotecontrol /sbin/remotecfg /etc/remote.conf
+    oneshot
+
 service systemcontrol /sbin/systemcontrol_static /etc/mesondisplay.cfg
     oneshot
 
