@@ -20,7 +20,7 @@ DEVICE_FOLDER := device/amlogic/q201
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := meson8
+TARGET_BOARD_PLATFORM := gxm
 TARGET_BOARD_HARDWARE := amlogic
 
 TARGET_CPU_ABI := armeabi-v7a
@@ -59,8 +59,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 BOARD_USES_MMCUTILS := true
 
 # Kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x01080000 --ramdisk_offset 0x01000000 \
-						--tags_offset 0x00000100 --second device/amlogic/q201/dtb
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x01080000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x00000000
 
@@ -103,3 +102,4 @@ TW_INCLUDE_NTFS_3G := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_NO_REBOOT_BOOTLOADER := true
+

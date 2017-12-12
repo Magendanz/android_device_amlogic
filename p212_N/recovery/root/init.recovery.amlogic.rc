@@ -1,0 +1,13 @@
+on early-init
+    insmod /boot/dwc_otg.ko
+    insmod /boot/dwc3.ko
+
+on boot
+service remotecontrol /sbin/remotecfg /etc/remote.conf
+    oneshot
+
+service systemcontrol /sbin/systemcontrol_static /etc/mesondisplay.cfg
+    oneshot
+
+service console /sbin/sh
+    console

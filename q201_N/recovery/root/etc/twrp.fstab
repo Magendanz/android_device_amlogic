@@ -1,0 +1,13 @@
+# mount point   fstype      device                  [device2]
+
+/cache          ext4        /dev/block/cache       /dev/block/mmcblk0p3   flags=backup=1;display=Cache
+/system         ext4        /dev/block/system      /dev/block/mmcblk0p13  flags=backup=1;display=System
+/data           ext4        /dev/block/data        /dev/block/mmcblk0p14  flags=backup=1
+
+/boot           emmc        /dev/block/boot        /dev/block/mmcblk0p12  flags=backup=1;display=Boot
+/recovery       emmc        /dev/block/recovery    /dev/block/mmcblk0p6   flags=backup=1;display=Recovery
+/logo           emmc        /dev/block/logo        /dev/block/mmcblk0p5   flags=backup=1;display=Logo;flashimg
+/misc           emmc        /dev/block/misc        /dev/block/mmcblk0p10
+
+/external_sd    auto        /dev/block/mmcblk1p1                          flags=wipeingui;storage;removable;display="External SD"
+/usb-otg        auto        /dev/block/sda1                               flags=display="USB OTG";removable;storage
