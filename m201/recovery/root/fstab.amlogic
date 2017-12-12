@@ -1,0 +1,3 @@
+/dev/block/system /system ext4 ro,noatime,nodiratime,nosuid,nodev,noauto_da_alloc wait
+/dev/block/data /data ext4 rw,noatime,nodiratime,nosuid,nodev,noauto_da_alloc wait,check,encryptable=footer
+/dev/block/cache /cache ext4 rw,noatime,nodiratime,nosuid,nodev,noauto_da_alloc wait,check

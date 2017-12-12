@@ -1,0 +1,7 @@
+on init
+    insmod /boot/aml_nftl_dev.ko sync=0
+    insmod /boot/mali.ko
+
+on boot
+service console /sbin/sh
+    console

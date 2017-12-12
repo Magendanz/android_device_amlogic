@@ -96,6 +96,7 @@ TW_THEME := landscape_hdpi
 TW_INCLUDE_CRYPTO := true
 TW_NO_BATT_PERCENT := true
 TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_BLANK := true
 TWHAVE_SELINUX := true
 TW_INCLUDE_FB2PNG := true
 TW_INCLUDE_NTFS_3G := true

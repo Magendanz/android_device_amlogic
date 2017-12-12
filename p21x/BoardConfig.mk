@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_FOLDER := device/amlogic/q20x
+DEVICE_FOLDER := device/amlogic/p21x
 
 # Inherit from the proprietary version
 
@@ -36,7 +36,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
-TARGET_BOOTLOADER_BOARD_NAME := q20x
+TARGET_BOOTLOADER_BOARD_NAME := p21x
 
 
 # Partitions
