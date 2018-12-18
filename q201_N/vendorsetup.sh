@@ -15,5 +15,4 @@
 #
 
 add_lunch_combo omni_q201_N-userdebug
-add_lunch_combo omni_q201_N-user
-add_lunch_combo omni_q201_N-eng
+

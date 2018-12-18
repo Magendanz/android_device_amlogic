@@ -105,6 +105,7 @@
 /dev/ttyACM*              0660   radio      radio
 # SWISTOP for Gobi Devices
 
+/dev/unifykeys             0666   system     system
 #
 /dev/graphics/*           0660   root       graphics
 

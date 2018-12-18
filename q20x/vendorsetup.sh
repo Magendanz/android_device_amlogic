@@ -15,5 +15,4 @@
 #
 
 add_lunch_combo omni_q20x-userdebug
-add_lunch_combo omni_q20x-user
-add_lunch_combo omni_q20x-eng
+

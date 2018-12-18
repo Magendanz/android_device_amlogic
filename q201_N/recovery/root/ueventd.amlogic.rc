@@ -94,7 +94,7 @@
 /dev/btusb0                0660   bluetooth     net_bt_stack
 
 /sys/class/video/device_resolution    0666   system     system
-
+/dev/hidraw*               0660   system     audio
 /sys/kernel/debug/tracing/events/readahead/do_file_map/enable 0666 root system
 /sys/kernel/debug/tracing/events/readahead/do_fs_read/enable 0666 root system
 /sys/kernel/debug/tracing/events/readahead/do_open_exec/enable 0666 root system

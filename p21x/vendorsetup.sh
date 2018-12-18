@@ -15,5 +15,4 @@
 #
 
 add_lunch_combo omni_p21x-userdebug
-add_lunch_combo omni_p21x-user
-add_lunch_combo omni_p21x-eng
+

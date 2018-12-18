@@ -4,9 +4,10 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 /dev/block/misc       /misc               emmc      defaults      defaults
+#mount system partition seperatly for quick boot
 /dev/block/system     /system             ext4      ro                                                    wait
-/dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,encryptable=footer
 /dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check
+/dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,encryptable=footer
 /devices/*.sd/mmc_host/sd*  auto                auto      defaults                       voldmanaged=sdcard1:auto,noemulatedsd
 /devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sd*  auto             auto      defaults                       voldmanaged=udisk:auto
 /devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sr*  auto             auto      defaults                       voldmanaged=sr0:auto
