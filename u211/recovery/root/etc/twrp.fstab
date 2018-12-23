@@ -2,8 +2,8 @@
 
 /cache          ext4        /dev/block/cache       flags=backup=1;display=Cache
 /system         ext4        /dev/block/system      flags=backup=1;display=System
-/vendor		ext4        /dev/block/vendor      flags=backup=1;display=Vendor
-/odm		ext4        /dev/block/odm         flags=backup=1;display=ODM
+/vendor         ext4        /dev/block/vendor      flags=backup=1;display=Vendor
+/odm            ext4        /dev/block/odm         flags=backup=1;display=ODM
 /data           ext4        /dev/block/data        flags=backup=1
 
 /boot           emmc        /dev/block/boot        flags=backup=1;display=Boot
