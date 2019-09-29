@@ -1,0 +1,26 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# mount point   fstype  device                 flags
+
+/boot           emmc    /dev/block/boot        flags=backup=1
+/recovery       emmc    /dev/block/recovery
+/logo           emmc    /dev/block/logo        flags=backup=1;flashimg;display=Logo
+/misc           emmc    /dev/block/misc
+/vbmeta         emmc    /dev/block/vbmeta
+
+/system_root    ext4    /dev/block/system      flags=backup=1;display="System"
+/system_image   emmc    /dev/block/system      flags=backup=1;flashimg
+/vendor         ext4    /dev/block/vendor      flags=backup=1
+/vendor_image   emmc    /dev/block/vendor      flags=backup=1;flashimg
+/product        ext4    /dev/block/product     flags=backup=1;display="Product"
+/product_image  emmc    /dev/block/product     flags=backup=1;flashimg;display="Product Image"
+/odm            ext4    /dev/block/odm         flags=wipeingui;backup=1;display="ODM"
+/odm_image      emmc    /dev/block/odm         flags=backup=1;flashimg;display="ODM Image"
+/cache          ext4    /dev/block/cache       flags=backup=1
+/data           ext4    /dev/block/data
+
+# Removable storage
+/external_sd    auto    /dev/block/mmcblk1p1   flags=storage;wipeingui;removable
+/usb-otg        auto    /dev/block/sda1        flags=storage;wipeingui;removable
