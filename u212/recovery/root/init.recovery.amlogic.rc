@@ -22,8 +22,8 @@ on boot
     write /config/usb_gadget/g1/bcdUSB 0x0200
     mkdir /config/usb_gadget/g1/strings/0x409 0770
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
-    write /config/usb_gadget/g1/strings/0x409/manufacturer droidlogic
-    write /config/usb_gadget/g1/strings/0x409/product KM9PRO
+    write /config/usb_gadget/g1/strings/0x409/manufacturer amlogic
+    write /config/usb_gadget/g1/strings/0x409/product u212
     mkdir /config/usb_gadget/g1/functions/ffs.adb
     mkdir /config/usb_gadget/g1/functions/mtp.gs0
     mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
@@ -52,9 +52,6 @@ service remotecfg2 /sbin/remotecfg -c /etc/remote.cfg -t /etc/remote.tab2 -d
 
 
 on property:sys.usb.config=none && property:sys.usb.configfs=1
-    setprop sys.usb.ffs.ready 0
-
-on property:init.svc.adbd=stopped
     setprop sys.usb.ffs.ready 0
 
 on property:sys.usb.config=mtp && property:sys.usb.configfs=1
