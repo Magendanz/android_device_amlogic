@@ -1,5 +1,0 @@
-ro.hardware=amlogic
-ro.chipname=s922x
-ro.arch=g12b
-ro.boot.bootdevice=ffe07000.emmc
-ro.sf.lcd_density=240

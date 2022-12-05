@@ -1,0 +1,12 @@
+ro.product.board=ah212
+ro.board.platform=g12a
+ro.hardware=amlogic
+ro.chipname=s905x3
+ro.product.system.manufacturer=amlogic
+ro.product.system.model=A95X
+ro.product.system.name=ohm
+ro.boot.bootdevice=ffe07000.emmc
+ro.boot.dynamic_partitions=true
+ro.treble.enabled=true
+ro.adb.secure=0
+ro.sf.lcd_density=240

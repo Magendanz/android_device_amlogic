@@ -1,0 +1,19 @@
+
+# Logical partitions
+system         /system     ext4    display="System"
+vendor         /vendor     ext4    display="Vendor"
+product        /product    ext4    display="Product"
+odm            /odm        ext4    display="ODM"
+
+# Physical partitions
+/boot          emmc        /dev/block/boot                       flags=backup=1;display="Boot";flashimg=1
+/recovery      emmc        /dev/block/recovery                   flags=backup=1;display="Recovery";flashimg=1
+/misc          emmc        /dev/block/misc
+/vbmeta        emmc        /dev/block/vbmeta
+/metadata      emmc        /dev/block/metadata
+/cache         ext4        /dev/block/cache                      flags=backup=1;display="Cache"
+/data          ext4        /dev/block/data
+
+# Removable storage
+/external_sd   auto        /dev/block/mmcblk1p1    /dev/block/mmcblk1    flags=display="Micro SD card";storage;wipeingui;removable
+/usb-otg       auto        /dev/block/sda1         /dev/block/sda        flags=display="USB-OTG";storage;wipeingui;removable
